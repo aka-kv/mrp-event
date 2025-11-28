@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Innovators Summit 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Domine', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              hand: ['Reenie Beanie', 'cursive'],
+            },
+            colors: {
+              paper: '#F3F3EE',
+              ink: '#1A1A1A',
+            },
+            animation: {
+              'flip-top': 'flip-top 0.6s ease-in',
+              'flip-bottom': 'flip-bottom 0.6s ease-out',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F3F3EE;
+        color: #1A1A1A;
+      }
+      /* Custom scrollbar to match stark aesthetic */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F3F3EE;
+        border-left: 1px solid #1A1A1A;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1A1A1A; 
+        border: 2px solid #F3F3EE;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #333; 
+      }
+      
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 20s linear infinite;
+      }
+
+      /* 3D Flip Clock Styles */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .flip-card {
+        transform-style: preserve-3d;
+      }
+      @keyframes fold-top {
+        0% { transform: rotateX(0deg); }
+        100% { transform: rotateX(-90deg); }
+      }
+      @keyframes unfold-bottom {
+        0% { transform: rotateX(90deg); }
+        100% { transform: rotateX(0deg); }
+      }
+      .animate-fold-top {
+        transform-origin: bottom;
+        animation: fold-top 0.6s ease-in forwards;
+      }
+      .animate-unfold-bottom {
+        transform-origin: top;
+        animation: unfold-bottom 0.6s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

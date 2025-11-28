@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyRealProduct | Events</title>
+    
+    <!-- Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=JetBrains+Mono:wght@300;400;500&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for minimal icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#F3F3EE',
+                        ink: '#1A1A1A',
+                        alert: '#D32F2F'
+                    },
+                    fontFamily: {
+                        serif: ['Domine', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        hand: ['Shadows Into Light', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* "Paper" Aesthetics - Strict Reset */
+        body {
+            background-color: #F3F3EE;
+            color: #1A1A1A;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* The Grid Lines */
+        .grid-line-b { border-bottom: 1px solid #1A1A1A; }
+        .grid-line-t { border-top: 1px solid #1A1A1A; }
+        .grid-line-l { border-left: 1px solid #1A1A1A; }
+        .grid-line-r { border-right: 1px solid #1A1A1A; }
+
+        /* Button Styling */
+        .btn-paper {
+            background-color: #1A1A1A;
+            color: #F3F3EE;
+            border: 1px solid #1A1A1A;
+            border-radius: 0;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-paper:hover {
+            background-color: transparent;
+            color: #1A1A1A;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #1A1A1A;
+            border: 1px solid #1A1A1A;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-outline:hover {
+            background-color: #1A1A1A;
+            color: #F3F3EE;
+        }
+
+        /* FLIP CLOCK STYLES */
+        .flip-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 4px;
+        }
+        .flip-card {
+            position: relative;
+            display: block;
+            width: 40px; 
+            height: 54px;
+            background: #1A1A1A;
+            border-radius: 2px;
+            color: #F3F3EE;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            line-height: 54px;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        @media (min-width: 768px) {
+            .flip-card {
+                width: 60px;
+                height: 80px;
+                font-size: 42px;
+                line-height: 80px;
+            }
+        }
+
+        .flip-card::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #F3F3EE;
+            opacity: 0.3;
+        }
+        
+        .flip-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-top: 8px;
+            letter-spacing: 1px;
+            color: #1A1A1A;
+        }
+
+        /* Image Filter for "Newspaper" Look */
+        .img-editorial {
+            filter: grayscale(100%) contrast(120%);
+            mix-blend-mode: multiply;
+        }
+
+        /* Handwritten Arrow Animation */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .hand-drawn {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Navigation --><nav class="grid-line-b sticky top-0 z-50 bg-paper">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between relative">
+            <div class="flex items-center gap-4">
+                <a href="https://myrealproduct.com" target="_blank" class="font-mono text-lg font-bold tracking-tighter hover:opacity-70 transition-opacity">
+                    MYREALPRODUCT <span class="font-light opacity-50">/</span> EVENTS
+                </a>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-xs uppercase tracking-widest">
+                <a href="https://myrealproduct.com" class="hover:underline decoration-1 underline-offset-4">Cohort</a>
+                <a href="/summit.html" class="hover:underline decoration-1 underline-offset-4 font-bold">Summit 2025</a>
+            </div>
+            
+            <!-- Subscribe Button Container --><div class="relative group">
+                <a href="https://hariprasad00.substack.com/subscribe" target="_blank" class="btn-paper px-5 py-2 text-xs font-mono font-bold relative z-10">
+                    Subscribe
+                </a>
+
+                <!-- HANDWRITTEN ARROW ANNOTATION --><div class="absolute top-10 right-0 w-48 pointer-events-none hand-drawn hidden lg:block">
+                    <div class="relative">
+                        <!-- Curved Arrow SVG --><svg class="absolute top-0 right-4 w-12 h-12 text-ink transform rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M60,80 C30,70 10,40 25,10" />
+                            <path d="M15,20 L25,10 L35,25" />
+                        </svg>
+                        <!-- Text --><p class="font-hand text-lg leading-tight absolute top-10 right-8 w-40 text-right transform -rotate-6">
+                            For deep dives <br> & essays!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Brand Philosophy --><header class="py-12 md:py-24 grid-line-b">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left: Text Content --><div>
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.9] tracking-tight mb-8">
+                    Where Intelligence <br>
+                    Meets <span class="italic">Reality.</span>
+                </h1>
+                <p class="font-mono text-sm md:text-base max-w-xl leading-relaxed mb-8">
+                    MyRealProduct exists to bridge the gap between AI theory and shipping product. Our events bring together the builders, the pragmatists, and the innovators focused on real-world applications, not just hype.
+                </p>
+                <div class="flex gap-4">
+                     <a href="https://myrealproduct.com" target="_blank" class="btn-outline px-6 py-3 font-mono text-xs font-bold">
+                        Explore MyRealProduct
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Provided Asset --><div class="hidden md:flex justify-center items-center h-full min-h-[300px] relative">
+                 <img src="/images/hero-art.png"
+                      alt="MyRealProduct AI Asset" 
+                      class="w-full max-w-3xl h-auto object-contain mix-blend-multiply grayscale-[20%] opacity-80" 
+                      style="filter: grayscale(80%) contrast(150%) brightness(110%);">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area: Current Events --><main class="flex-grow">
+        
+        <!-- Section Header --><div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 min-h-[600px]">
+            
+            <!-- Sidebar / Label --><div class="md:col-span-2 py-8 px-6 md:border-r border-ink flex md:flex-col justify-between items-start">
+                <span class="font-mono text-xs uppercase tracking-widest block rotate-0 md:rotate-0">
+                    Featured<br>Event
+                </span>
+                <div class="hidden md:block">
+                    <i class="fa-solid fa-arrow-down-long text-2xl"></i>
+                </div>
+            </div>
+
+            <!-- THE EVENT BOX (AI Innovators Summit) --><div class="md:col-span-10">
+                
+                <article class="h-full flex flex-col" id="register">
+                    
+                    <!-- Top Bar: Meta Data --><div class="grid-line-b p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-paper">
+                        <div class="flex gap-3">
+                            <span class="inline-block px-2 py-1 border border-ink font-mono text-xs uppercase bg-ink text-paper">
+                                Annual Conference
+                            </span>
+                            <span class="inline-block px-2 py-1 border border-ink font-mono text-xs uppercase">
+                                Global Virtual
+                            </span>
+                        </div>
+                        <div class="font-mono text-sm">
+                            DECEMBER 15, 2025 &mdash; 09:00 PST
+                        </div>
+                    </div>
+
+                    <!-- Main Content Grid --><div class="flex-grow grid grid-cols-1 lg:grid-cols-2">
+                        
+                        <!-- Left: Title & Timer --><div class="p-6 md:p-12 lg:border-r border-ink flex flex-col justify-center">
+                            <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight">
+                                AI Innovators <br> Summit 2025
+                            </h2>
+                            <p class="font-serif text-lg mb-4 leading-relaxed">
+                                "The defining conversation for the AI era."
+                            </p>
+                            <p class="font-mono text-sm mb-8 max-w-md opacity-80">
+                                This isn't just another webinar. We're bringing together the sharpest minds in the industry—from LinkedIn Top Voices to TEDx veterans—to debate the future of agents, LLMs, and software engineering. No sales pitches, just hard-won insights from the people actually building the systems.
+                            </p>
+
+                            <!-- MECHANICAL FLIP CLOCK --><div class="mb-8 p-6 border border-ink bg-[#EBEBE5]">
+                                <p class="font-mono text-xs uppercase mb-4 tracking-widest text-center">Summit Begins In:</p>
+                                <div class="flex items-start justify-center" id="countdown">
+                                    <div class="flip-unit">
+                                        <span class="flip-card" id="days">00</span>
+                                        <span class="flip-label">Days</span>
+                                    </div>
+                                    <div class="flip-unit">
+                                        <span class="flip-card" id="hours">00</span>
+                                        <span class="flip-label">Hrs</span>
+                                    </div>
+                                    <div class="flip-unit">
+                                        <span class="flip-card" id="minutes">00</span>
+                                        <span class="flip-label">Min</span>
+                                    </div>
+                                    <div class="flip-unit">
+                                        <span class="flip-card" id="seconds">00</span>
+                                        <span class="flip-label">Sec</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto pt-6">
+                                <a href="/summit.html" class="btn-paper w-full px-8 py-4 font-mono font-bold text-sm inline-block text-center">
+                                    Secure Your Seat &mdash; Free
+                                </a>
+                                <p class="text-center font-mono text-[10px] uppercase mt-2 opacity-50">Join 5,000+ Engineers & Founders</p>
+                            </div>
+                        </div>
+
+                        <!-- Right: Host Info --><div class="relative grid-line-t lg:border-t-0 flex flex-col">
+                            
+                            <!-- Host Header --><div class="p-4 grid-line-b bg-[#EBEBE5]">
+                                <span class="font-mono text-xs uppercase tracking-widest">Your Host</span>
+                            </div>
+
+                            <!-- Image Container --><div class="flex-grow relative overflow-hidden bg-gray-200 border-b border-ink h-64 lg:h-auto group">
+                                <!-- Using the uploaded image path --><img src="/images/hari-prasad.webp" alt="Hari Prasad" class="absolute inset-0 w-full h-full object-contain bg-[#EBEBE5] img-editorial transition-transform duration-700 group-hover:scale-105">
+                            </div>
+
+                            <!-- Host Bio --><div class="p-6 md:p-10 bg-paper">
+                                <h3 class="font-serif text-2xl mb-2">Hari Prasad Rengaanthan</h3>
+                                <p class="font-mono text-xs uppercase tracking-widest mb-4 opacity-60">
+                                    Founder, MyRealProduct
+                                </p>
+                                <p class="font-serif text-lg leading-relaxed mb-6">
+                                    "I founded this summit to create the resource I wish I had: a place where serious engineers could ignore the hype cycle and focus on the architecture of tomorrow."
+                                </p>
+                                
+                                <!-- Badges --><div class="flex flex-wrap gap-4 font-mono text-xs border-t border-ink pt-4">
+                                    <a href="https://www.linkedin.com/in/hariprasad20/" target="_blank" class="flex items-center gap-2 hover:underline">
+                                        <i class="fa-brands fa-linkedin"></i> LINKEDIN TOP VOICE
+                                    </a>
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-solid fa-microphone-lines"></i> TEDx SPEAKER
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- Manifesto / Why Attend (The "Paper" Details) --><section class="grid-line-t grid-line-b bg-white">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3">
+                
+                <!-- Col 1 --><div class="p-8 md:p-12 md:border-r border-ink hover:bg-[#F3F3EE] transition-colors group">
+                    <div class="font-mono text-4xl mb-4 group-hover:text-alert transition-colors">01</div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Market Validation</h3>
+                    <p class="font-mono text-sm leading-relaxed opacity-80">
+                        We don't just talk code. We talk about finding the bleeding neck problem. Learn how top voices validate their ideas before committing resources.
+                    </p>
+                </div>
+
+                <!-- Col 2 --><div class="p-8 md:p-12 md:border-r border-ink hover:bg-[#F3F3EE] transition-colors group">
+                    <div class="font-mono text-4xl mb-4 group-hover:text-alert transition-colors">02</div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Engineering Reality</h3>
+                    <p class="font-mono text-sm leading-relaxed opacity-80">
+                        A candid look at the tech stack. What breaks in production? How do you handle latency? We get into the weeds of real deployment.
+                    </p>
+                </div>
+
+                <!-- Col 3 --><div class="p-8 md:p-12 hover:bg-[#F3F3EE] transition-colors group">
+                    <div class="font-mono text-4xl mb-4 group-hover:text-alert transition-colors">03</div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Acquisition Channels</h3>
+                    <p class="font-mono text-sm leading-relaxed opacity-80">
+                        Building is half the battle. Our speakers share the specific, tactical channels they used to acquire their first 10,000 users.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer --><footer class="bg-ink text-paper py-12 border-t border-ink">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="mb-8 md:mb-0">
+                <h4 class="font-serif text-2xl mb-2">MyRealProduct</h4>
+                <p class="font-mono text-xs opacity-60">
+                    &copy; 2025. All rights reserved.<br>
+                    San Francisco
+                </p>
+            </div>
+            <div class="flex gap-8 font-mono text-xs uppercase tracking-widest items-center">
+                <a href="https://hariprasad00.substack.com/" target="_blank" class="hover:text-gray-400">Newsletter</a>
+                <a href="https://myrealproduct.com" target="_blank" class="hover:text-gray-400">Cohorts</a>
+                <span class="opacity-50">|</span>
+                <a href="mailto:contact@myrealproduct.com" class="hover:text-white text-gray-400 normal-case">
+                    contact@myrealproduct.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Countdown Script --><script>
+        // Set the date we're counting down to
+        const countDownDate = new Date("Dec 15, 2025 09:00:00").getTime();
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            if (distance < 0) {
+                // If event passed
+                document.getElementById("countdown").innerHTML = "REGISTRATION CLOSED";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update DOM with zero-padding
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Initial call
+    </script>
+</body>
+</html>

@@ -28,6 +28,14 @@ const speakers: Speaker[] = [
     highlights: ['Ex-Google, AWS', '120k+ LinkedIn', 'EB1-A Recipient']
   },
   {
+    name: 'Venkata Naga Sai Kumar Bysani',
+    role: 'Lead Data Analyst',
+    company: 'BCBS',
+    image: '/images/dec25-summit-images/sai.jpeg',
+    linkedin: 'https://www.linkedin.com/in/saibysani18/',
+    highlights: ['210k+ Linkedin', 'Featured on Times Square', 'Top 1% Data creator']
+  },
+  {
     name: 'Karun Thankachan',
     role: 'Senior Data Scientist',
     company: 'Walmart',
@@ -46,7 +54,7 @@ const speakers: Speaker[] = [
 ];
 
 // Number of placeholder slots to show
-const PLACEHOLDER_COUNT = 2;
+const PLACEHOLDER_COUNT = 1;
 
 const Speakers: React.FC = () => {
   return (

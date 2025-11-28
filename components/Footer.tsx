@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
 
         <div className="p-8 md:p-10 flex flex-col md:items-end justify-center">
             
-            <button className="px-8 py-3 bg-ink text-paper font-mono uppercase text-sm border border-ink hover:bg-paper hover:text-ink transition-all mb-8 w-full md:w-auto">
+            <a href="https://luma.com/xp3erbsz" target="_blank" rel="noreferrer" className="px-8 py-3 bg-ink text-paper font-mono uppercase text-sm border border-ink hover:bg-paper hover:text-ink transition-all mb-8 w-full md:w-auto inline-block text-center">
                 Register Now &rarr;
-            </button>
+            </a>
 
             <div className="flex flex-col md:flex-row gap-4 md:gap-6 mt-2 font-mono text-sm uppercase items-start md:items-center">
                 <a href="https://myrealproduct.com" target="_blank" rel="noreferrer" className="hover:underline">Cohort</a>

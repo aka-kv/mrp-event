@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyRealProduct | Events</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/images/logo.jpg">
+    <link rel="apple-touch-icon" href="/images/logo.jpg">
+    
     <!-- Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com">
@@ -153,7 +157,7 @@
             </div>
             <div class="hidden md:flex gap-6 font-mono text-xs uppercase tracking-widest">
                 <a href="https://myrealproduct.com" class="hover:underline decoration-1 underline-offset-4">Cohort</a>
-                <a href="/summit.html" class="hover:underline decoration-1 underline-offset-4 font-bold">Summit 2025</a>
+                <a href="/summit" class="hover:underline decoration-1 underline-offset-4 font-bold">Summit 2025</a>
             </div>
             
             <!-- Subscribe Button Container --><div class="relative group">
@@ -230,7 +234,7 @@
                             </span>
                         </div>
                         <div class="font-mono text-sm">
-                            DECEMBER 15, 2025 &mdash; 09:00 PST
+                            DECEMBER 21, 2025 &mdash; 11:00 EST
                         </div>
                     </div>
 
@@ -270,7 +274,7 @@
                             </div>
 
                             <div class="mt-auto pt-6">
-                                <a href="/summit.html" class="btn-paper w-full px-8 py-4 font-mono font-bold text-sm inline-block text-center">
+                                <a href="/summit" class="btn-paper w-full px-8 py-4 font-mono font-bold text-sm inline-block text-center">
                                     Secure Your Seat &mdash; Free
                                 </a>
                                 <p class="text-center font-mono text-[10px] uppercase mt-2 opacity-50">Join 5,000+ Engineers & Founders</p>
@@ -365,8 +369,8 @@
     </footer>
 
     <!-- Countdown Script --><script>
-        // Set the date we're counting down to
-        const countDownDate = new Date("Dec 15, 2025 09:00:00").getTime();
+        // Set the date we're counting down to (11am EST = 4pm UTC)
+        const countDownDate = new Date("2025-12-21T16:00:00Z").getTime();
 
         function updateTimer() {
             const now = new Date().getTime();

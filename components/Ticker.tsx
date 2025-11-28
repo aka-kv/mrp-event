@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Ticker: React.FC = () => {
-  const content = "REGISTRATIONS CLOSING SOON /// JOIN THE AI REVOLUTION /// DECEMBER 15 2025 /// BUILD SHIP SCALE /// ";
+  const content = "REGISTRATIONS CLOSING SOON /// JOIN THE AI REVOLUTION /// DECEMBER 21 2025 /// BUILD SHIP SCALE /// ";
   const repeatedContent = Array(10).fill(content).join("");
 
   return (

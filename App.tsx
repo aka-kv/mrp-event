@@ -20,12 +20,9 @@ const App: React.FC = () => {
         <div className="border-t border-ink">
           <Features />
         </div>
-        {/* Participating Voices temporarily hidden */}
-        {/*
         <div className="border-t border-ink">
           <Speakers />
         </div>
-        */}
       </main>
       <Footer />
     </div>

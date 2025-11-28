@@ -18,14 +18,14 @@ const Navbar: React.FC = () => {
           <span className="font-mono font-bold text-xl tracking-tighter uppercase">
             AI IS_25
           </span>
-          <a href="/index.html" className="hidden sm:inline-block font-mono text-[10px] border border-ink px-1 pt-[2px] pb-[1px] uppercase tracking-wider hover:bg-ink hover:text-paper transition-colors">
+          <a href="/" className="hidden sm:inline-block font-mono text-[10px] border border-ink px-1 pt-[2px] pb-[1px] uppercase tracking-wider hover:bg-ink hover:text-paper transition-colors">
             [ MRP_EVENT ]
           </a>
         </div>
         
-        <button className="hidden sm:block px-6 py-2 text-sm font-mono font-bold uppercase bg-ink text-paper border border-ink hover:bg-paper hover:text-ink transition-colors">
+        <a href="https://luma.com/xp3erbsz" target="_blank" rel="noreferrer" className="hidden sm:block px-6 py-2 text-sm font-mono font-bold uppercase bg-ink text-paper border border-ink hover:bg-paper hover:text-ink transition-colors">
           Register &rarr;
-        </button>
+        </a>
       </div>
     </nav>
   );

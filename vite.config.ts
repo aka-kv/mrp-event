@@ -9,7 +9,20 @@ export default defineConfig(({ mode }) => {
         port: 3000,
         host: '0.0.0.0',
       },
-      plugins: [react()],
+      plugins: [
+        react(),
+        {
+          name: 'rewrite-summit-route',
+          configureServer(server) {
+            server.middlewares.use((req, res, next) => {
+              if (req.url === '/summit' || req.url === '/summit/') {
+                req.url = '/summit.html';
+              }
+              next();
+            });
+          },
+        },
+      ],
       build: {
         rollupOptions: {
           input: {

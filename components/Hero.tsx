@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-12-15T09:00:00").getTime();
+    const targetDate = new Date("2025-12-21T16:00:00Z").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
 
       <div className="w-full border-y border-ink py-4 mb-12 max-w-4xl mx-auto z-10 bg-paper">
         <p className="font-mono text-[10px] md:text-sm uppercase tracking-wider flex flex-col md:flex-row justify-between items-center gap-2">
-          <span>December 15, 2025</span>
+          <span>December 21, 2025</span>
           <span className="hidden md:inline mx-4 opacity-30">////</span>
           <span>Online Stream</span>
           <span className="hidden md:inline mx-4 opacity-30">////</span>
@@ -84,9 +84,9 @@ const Hero: React.FC = () => {
              <span className="font-hand text-xl absolute -bottom-4 right-0 rotate-6">spots limited</span>
         </div>
 
-        <button className="relative px-8 md:px-12 py-4 md:py-5 bg-ink text-paper font-mono uppercase text-base md:text-lg border border-ink hover:bg-paper hover:text-ink transition-all duration-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+        <a href="https://luma.com/xp3erbsz" target="_blank" rel="noreferrer" className="relative px-8 md:px-12 py-4 md:py-5 bg-ink text-paper font-mono uppercase text-base md:text-lg border border-ink hover:bg-paper hover:text-ink transition-all duration-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] inline-block">
             Reserve Seat
-        </button>
+        </a>
       </div>
       
     </section>

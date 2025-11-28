@@ -16,7 +16,7 @@ const HostBio: React.FC = () => {
                     <img 
                         src="/images/hari-prasad.webp" 
                         alt="Hari Prasad" 
-                        className="max-h-full max-w-full object-contain bg-[#EBEBE5] p-6 md:p-10 grayscale contrast-125 hover:contrast-100 transition-all duration-500"
+                        className="max-h-full max-w-full object-contain bg-[#EBEBE5] p-6 md:p-10 grayscale hover:grayscale-0 transition-all duration-500"
                     />
                 </a>
 

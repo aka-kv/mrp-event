@@ -26,11 +26,27 @@ const speakers: Speaker[] = [
     image: '/images/dec25-summit-images/vishakha_sadhwani.jpg',
     linkedin: 'https://www.linkedin.com/in/vsadhwani/',
     highlights: ['Ex-Google, AWS', '120k+ LinkedIn', 'EB1-A Recipient']
+  },
+  {
+    name: 'Karun Thankachan',
+    role: 'Senior Data Scientist',
+    company: 'Walmart',
+    image: '/images/dec25-summit-images/karun.jpg',
+    linkedin: 'https://www.linkedin.com/in/karunt/',
+    highlights: ['88k+ LinkedIn', 'ex-Amazon', 'NIT & CMU Alum']
+  },
+  {
+    name: 'Irena Palamani',
+    role: 'Director of People Science',
+    company: 'Walmart',
+    image: '/images/dec25-summit-images/irena.jpg',
+    linkedin: 'https://www.linkedin.com/in/ipxhurxhi/',
+    highlights: ['ex-Amazon', 'Data science + ML + AI creator']
   }
 ];
 
 // Number of placeholder slots to show
-const PLACEHOLDER_COUNT = 1;
+const PLACEHOLDER_COUNT = 2;
 
 const Speakers: React.FC = () => {
   return (
@@ -38,7 +54,7 @@ const Speakers: React.FC = () => {
       <div className="border-b border-ink p-6 md:p-10">
         <h2 className="font-serif text-4xl md:text-5xl font-bold uppercase">Participating Voices</h2>
         <p className="font-mono text-sm uppercase tracking-wider mt-4 opacity-70">
-          {speakers.length} Confirmed {speakers.length === 1 ? 'Speaker' : 'Speakers'}
+          Speakers: Your Favorite Leaders
         </p>
       </div>
 

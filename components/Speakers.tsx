@@ -50,11 +50,19 @@ const speakers: Speaker[] = [
     image: '/images/dec25-summit-images/irena.jpg',
     linkedin: 'https://www.linkedin.com/in/ipxhurxhi/',
     highlights: ['ex-Amazon', 'Data science + ML + AI creator']
+  },
+  {
+    name: 'Saloni Thakkar',
+    role: 'Research Data Scientist',
+    company: 'Barclays',
+    image: '/images/dec25-summit-images/saloni.jpeg',
+    linkedin: 'https://www.linkedin.com/in/salonithakkar/',
+    highlights: ['Ex- HP', 'EB1A Awardee', 'TAMU Alum']
   }
 ];
 
 // Number of placeholder slots to show
-const PLACEHOLDER_COUNT = 1;
+const PLACEHOLDER_COUNT = 0;
 
 const Speakers: React.FC = () => {
   return (

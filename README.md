@@ -11,7 +11,6 @@ Simple steps to run this on any laptop.
 git clone https://github.com/your-org/ai-innovators-summit-2025.git
 cd ai-innovators-summit-2025
 npm install
-npm run dev
 ```
 Open the URL shown by Vite (defaults to http://localhost:3000).
 

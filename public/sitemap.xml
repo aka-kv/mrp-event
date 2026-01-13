@@ -20,5 +20,21 @@
     <priority>0.9</priority>
   </url>
   
+  <!-- Immigrant Summit Page -->
+  <url>
+    <loc>https://events.myrealproduct.com/immigrant-summit</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- All Events Page -->
+  <url>
+    <loc>https://events.myrealproduct.com/all-events</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
 </urlset>
 

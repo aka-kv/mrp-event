@@ -18,6 +18,12 @@ export default defineConfig(({ mode }) => {
               if (req.url === '/summit' || req.url === '/summit/') {
                 req.url = '/summit.html';
               }
+              if (req.url === '/immigrant-summit' || req.url === '/immigrant-summit/') {
+                req.url = '/immigrant-summit.html';
+              }
+              if (req.url === '/all-events' || req.url === '/all-events/') {
+                req.url = '/all-events.html';
+              }
               next();
             });
           },
@@ -28,6 +34,8 @@ export default defineConfig(({ mode }) => {
           input: {
             main: path.resolve(__dirname, 'index.html'),
             summit: path.resolve(__dirname, 'summit.html'),
+            immigrantSummit: path.resolve(__dirname, 'immigrant-summit.html'),
+            allEvents: path.resolve(__dirname, 'all-events.html'),
           },
         },
       },

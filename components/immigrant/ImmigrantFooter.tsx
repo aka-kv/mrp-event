@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Footer: React.FC = () => {
+const ImmigrantFooter: React.FC = () => {
   return (
     <footer className="bg-paper border-t border-ink max-w-7xl mx-auto border-x mb-8">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-ink flex flex-col justify-between h-full">
             <div>
-              <h4 className="font-mono font-bold text-lg uppercase mb-2">AI Innovators Summit</h4>
-              <p className="font-serif text-sm opacity-60">&copy; 2025. All rights reserved.</p>
+              <h4 className="font-mono font-bold text-lg uppercase mb-2">The Immigrant Summit</h4>
+              <p className="font-serif text-sm opacity-60">&copy; 2026. All rights reserved.</p>
             </div>
             
             <div className="mt-8 pt-8 border-t border-ink border-dashed">
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 
         <div className="p-8 md:p-10 flex flex-col md:items-end justify-center">
             
-            <a href="https://luma.com/xp3erbsz" target="_blank" rel="noreferrer" className="px-8 py-3 bg-ink text-paper font-mono uppercase text-sm border border-ink hover:bg-paper hover:text-ink transition-all mb-8 w-full md:w-auto inline-block text-center">
+            <a href="#" target="_blank" rel="noreferrer" className="px-8 py-3 bg-ink text-paper font-mono uppercase text-sm border border-ink hover:bg-paper hover:text-ink transition-all mb-8 w-full md:w-auto inline-block text-center">
                 Register Now &rarr;
             </a>
 
@@ -38,4 +38,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default ImmigrantFooter;

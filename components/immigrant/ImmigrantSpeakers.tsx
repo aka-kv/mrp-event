@@ -10,8 +10,15 @@ interface Speaker {
   highlights?: string[];
 }
 
-// Placeholder speakers - to be updated later
 const speakers: Speaker[] = [
+  {
+    name: 'Sohan Sethi',
+    role: 'Data Analytics Manager',
+    company: 'HCSC',
+    image: '/images/dec25-summit-images/sohan_sethi.jpg',
+    linkedin: 'https://www.linkedin.com/in/sohansethi/',
+    highlights: ['120k+ LinkedIn', 'Co-founded 2 Startups By 20', 'Featured on TEDx, CNBC, Business Insider', 'India to US (STEM OPT Visa)']
+  },
   {
     name: 'Speaker TBD',
     role: 'Role TBD',
@@ -55,24 +62,23 @@ const speakers: Speaker[] = [
 ];
 
 const ImmigrantSpeakers: React.FC = () => {
-  const firstRowSpeakers = speakers.slice(0, 3);
-  const lastRowSpeakers = speakers.slice(3);
-
-  const renderSpeaker = (speaker: Speaker, index: number, totalInRow: number, isLastRow: boolean = false) => {
+  const renderSpeaker = (speaker: Speaker, index: number) => {
+    // For 6 speakers in a 3x2 grid, all speakers get borders except:
+    // - Last column (index % 3 === 2): no right border
+    // - Last row (index >= 3): no bottom border
     let borderClasses = 'group border-b border-ink md:border-b-0 md:odd:border-r';
     
-    if (totalInRow === 3 && !isLastRow) {
-      // First row: 3 speakers - right border on all except last, bottom border on all
-      borderClasses += ' lg:border-r lg:border-b lg:[&:nth-child(3n)]:border-r-0';
-    } else if (totalInRow === 2 && isLastRow) {
-      // Last row: 2 speakers - left border on first, right border on both, no bottom border
-      borderClasses += ' lg:border-b-0 lg:border-r';
-      if (index === 0) {
-        // First speaker: left border + right border
-        borderClasses += ' lg:border-l';
-      }
-    } else {
-      borderClasses += ' lg:border-r lg:border-b';
+    // Desktop layout: 3 columns, 2 rows
+    borderClasses += ' lg:border-r lg:border-b';
+    
+    // Remove right border on last column (indices 2 and 5)
+    if (index % 3 === 2) {
+      borderClasses += ' lg:border-r-0';
+    }
+    
+    // Remove bottom border on last row (indices 3, 4, 5)
+    if (index >= 3) {
+      borderClasses += ' lg:border-b-0';
     }
     
     return (
@@ -152,21 +158,10 @@ const ImmigrantSpeakers: React.FC = () => {
         </p>
       </div>
 
-      {/* First row - 3 speakers */}
+      {/* 6 speakers in a 3x2 grid layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {firstRowSpeakers.map((speaker, index) => renderSpeaker(speaker, index, firstRowSpeakers.length, false))}
+        {speakers.map((speaker, index) => renderSpeaker(speaker, index))}
       </div>
-
-      {/* Last row - 2 speakers centered */}
-      {lastRowSpeakers.length > 0 && (
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full lg:w-2/3">
-            {lastRowSpeakers.map((speaker, index) => 
-              renderSpeaker(speaker, index, lastRowSpeakers.length, true)
-            )}
-          </div>
-        </div>
-      )}
     </section>
   );
 };

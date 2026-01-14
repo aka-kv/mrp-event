@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  registrationUrl?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ registrationUrl = '/all-events' }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -27,7 +31,12 @@ const Navbar: React.FC = () => {
           <a href="/all-events" className="font-mono text-xs uppercase tracking-widest hover:underline decoration-1 underline-offset-4">
             All Events
           </a>
-          <a href="#" target="_blank" rel="noreferrer" className="px-6 py-2 text-sm font-mono font-bold uppercase bg-ink text-paper border border-ink hover:bg-paper hover:text-ink transition-colors">
+          <a 
+            href={registrationUrl} 
+            target={registrationUrl.startsWith('http') ? '_blank' : undefined}
+            rel={registrationUrl.startsWith('http') ? 'noreferrer' : undefined}
+            className="px-6 py-2 text-sm font-mono font-bold uppercase bg-ink text-paper border border-ink hover:bg-paper hover:text-ink transition-colors"
+          >
             Register &rarr;
           </a>
         </div>

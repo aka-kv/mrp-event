@@ -12,7 +12,7 @@ import ImmigrantMetrics from './components/immigrant/ImmigrantMetrics';
 const ImmigrantApp: React.FC = () => {
   return (
     <div className="min-h-screen bg-paper text-ink font-serif selection:bg-ink selection:text-paper overflow-x-hidden">
-      <Navbar />
+      <Navbar registrationUrl="https://luma.com/fsar999n" />
       <main className="border-x border-ink max-w-7xl mx-auto bg-paper">
         <ImmigrantHero />
         <ImmigrantTicker />

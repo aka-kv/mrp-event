@@ -66,26 +66,12 @@ const Hero: React.FC = () => {
         <FlipUnit value={timeLeft.seconds} label="Secs" />
       </div>
 
-      <div className="relative group z-10">
-        {/* Handwriting Arrows */}
-        <div className="absolute -left-28 md:-left-40 top-1/2 -translate-y-1/2 hidden md:block opacity-60 pointer-events-none">
-            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-ink">
-                <path d="M10 40 Q 60 10, 110 30" fill="none" />
-                <path d="M100 25 L 110 30 L 100 35" />
-            </svg>
-            <span className="font-hand text-xl absolute -top-4 left-0 -rotate-12">don't miss out!</span>
+      <div className="relative group z-10 flex flex-col items-center gap-6">
+        <div className="px-8 md:px-12 py-4 md:py-5 border-2 border-ink font-mono uppercase text-base md:text-lg inline-block opacity-60">
+            Registration Closed
         </div>
-        
-        <div className="absolute -right-28 md:-right-40 top-1/2 -translate-y-1/2 hidden md:block opacity-60 pointer-events-none">
-            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-ink">
-                <path d="M110 40 Q 60 50, 10 30" fill="none" />
-                <path d="M20 25 L 10 30 L 20 35" />
-            </svg>
-             <span className="font-hand text-xl absolute -bottom-4 right-0 rotate-6">spots limited</span>
-        </div>
-
-        <a href="https://luma.com/xp3erbsz" target="_blank" rel="noreferrer" className="relative px-8 md:px-12 py-4 md:py-5 bg-ink text-paper font-mono uppercase text-base md:text-lg border border-ink hover:bg-paper hover:text-ink transition-all duration-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] inline-block">
-            Reserve Seat
+        <a href="/all-events" className="relative px-8 md:px-12 py-4 md:py-5 bg-ink text-paper font-mono uppercase text-base md:text-lg border border-ink hover:bg-paper hover:text-ink transition-all duration-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] inline-block">
+            Check Out Our Other Events
         </a>
       </div>
       

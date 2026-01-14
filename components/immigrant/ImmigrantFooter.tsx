@@ -19,7 +19,7 @@ const ImmigrantFooter: React.FC = () => {
 
         <div className="p-8 md:p-10 flex flex-col md:items-end justify-center">
             
-            <a href="#" target="_blank" rel="noreferrer" className="px-8 py-3 bg-ink text-paper font-mono uppercase text-sm border border-ink hover:bg-paper hover:text-ink transition-all mb-8 w-full md:w-auto inline-block text-center">
+            <a href="https://luma.com/fsar999n" target="_blank" rel="noreferrer" className="px-8 py-3 bg-ink text-paper font-mono uppercase text-sm border border-ink hover:bg-paper hover:text-ink transition-all mb-8 w-full md:w-auto inline-block text-center">
                 Register Now &rarr;
             </a>
 

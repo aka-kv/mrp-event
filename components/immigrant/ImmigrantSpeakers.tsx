@@ -20,28 +20,28 @@ const speakers: Speaker[] = [
     highlights: ['120k+ LinkedIn', 'Co-founded 2 Startups By 20', 'Featured on TEDx, CNBC, Business Insider', 'India to US (STEM OPT Visa)']
   },
   {
-    name: 'Speaker TBD',
-    role: 'Role TBD',
-    company: 'Company TBD',
-    image: '/images/placeholder-speaker.jpg',
-    linkedin: '#',
-    highlights: []
+    name: 'Soundarya Balasubramani',
+    role: 'Author & Entrepreneur',
+    company: 'Ex- Open Atlas',
+    image: '/images/immigrant-summit-images/soundarya.jpeg',
+    linkedin: 'https://www.linkedin.com/in/soundarya-balasubramani/',
+    highlights: ['250k+ followers on Linkedin & Instagram', '3x Author', 'Ex-PM @ Salesforce', 'Ivy League Grad']
   },
   {
-    name: 'Speaker TBD',
-    role: 'Role TBD',
-    company: 'Company TBD',
-    image: '/images/placeholder-speaker.jpg',
-    linkedin: '#',
-    highlights: []
+    name: 'Sunjana Ramana',
+    role: 'Data & AI Engineer',
+    company: 'QBE Insurance',
+    image: '/images/immigrant-summit-images/sunjana.jpeg',
+    linkedin: 'https://www.linkedin.com/in/sunjana-ramana/',
+    highlights: ['Tedx Speaker', 'Featured - Fox, NBC, Times Square', 'Columbia University Scholar 23\'', 'F1 Stem OPT -> UK HPI Visa']
   },
   {
-    name: 'Speaker TBD',
-    role: 'Role TBD',
-    company: 'Company TBD',
-    image: '/images/placeholder-speaker.jpg',
-    linkedin: '#',
-    highlights: []
+    name: 'Saloni Thakkar',
+    role: 'Research Data Scientist',
+    company: 'Barclays',
+    image: '/images/dec25-summit-images/saloni.jpeg',
+    linkedin: 'https://www.linkedin.com/in/salonithakkar/',
+    highlights: ['Ex- HP', 'EB1A Awardee', 'TAMU Alum']
   },
   {
     name: 'Speaker TBD',

@@ -22,10 +22,10 @@ const speakers: Speaker[] = [
   {
     name: 'Soundarya Balasubramani',
     role: 'Author & Entrepreneur',
-    company: 'Ex- Open Atlas',
+    company: 'Author of Unshackled',
     image: '/images/immigrant-summit-images/soundarya.jpeg',
     linkedin: 'https://www.linkedin.com/in/soundarya-balasubramani/',
-    highlights: ['250k+ followers on Linkedin & Instagram', '3x Author', 'Ex-PM @ Salesforce', 'Ivy League Grad']
+    highlights: ['250k+ followers on Linkedin & Instagram', '3x Author', 'Ex-PM @ Salesforce', 'Featured on Business Insider, NDTV, etc.']
   },
   {
     name: 'Sunjana Ramana',
@@ -42,6 +42,22 @@ const speakers: Speaker[] = [
     image: '/images/dec25-summit-images/saloni.jpeg',
     linkedin: 'https://www.linkedin.com/in/salonithakkar/',
     highlights: ['Ex- HP', 'EB1A Awardee', 'TAMU Alum']
+  },
+  {
+    name: 'Sumit Gupta',
+    role: 'Lead Analytics Engineer',
+    company: 'Notion',
+    image: '/images/immigrant-summit-images/sumit.png',
+    linkedin: 'https://www.linkedin.com/in/sumonigupta/',
+    highlights: ['Ex-Snowflake, Dropbox', 'EB1A recipient', '27k+ on LinkedIn']
+  },
+  {
+    name: 'Venkata Naga Sai Kumar Bysani',
+    role: 'Lead Data Analyst',
+    company: 'BCBS',
+    image: '/images/dec25-summit-images/sai.jpeg',
+    linkedin: 'https://www.linkedin.com/in/saibysani18/',
+    highlights: ['220k+ Linkedin', 'Featured on Times Square', 'Top 1% Data creator']
   },
   {
     name: 'Speaker TBD',
@@ -63,21 +79,21 @@ const speakers: Speaker[] = [
 
 const ImmigrantSpeakers: React.FC = () => {
   const renderSpeaker = (speaker: Speaker, index: number) => {
-    // For 6 speakers in a 3x2 grid, all speakers get borders except:
+    // For 8 speakers in a 3x3 grid (with 2 in last row), all speakers get borders except:
     // - Last column (index % 3 === 2): no right border
-    // - Last row (index >= 3): no bottom border
+    // - Last row (index >= 6): no bottom border
     let borderClasses = 'group border-b border-ink md:border-b-0 md:odd:border-r';
     
-    // Desktop layout: 3 columns, 2 rows
+    // Desktop layout: 3 columns, 3 rows
     borderClasses += ' lg:border-r lg:border-b';
     
-    // Remove right border on last column (indices 2 and 5)
+    // Remove right border on last column (indices 2, 5, 7)
     if (index % 3 === 2) {
       borderClasses += ' lg:border-r-0';
     }
     
-    // Remove bottom border on last row (indices 3, 4, 5)
-    if (index >= 3) {
+    // Remove bottom border on last row (indices 6, 7)
+    if (index >= 6) {
       borderClasses += ' lg:border-b-0';
     }
     
@@ -158,7 +174,7 @@ const ImmigrantSpeakers: React.FC = () => {
         </p>
       </div>
 
-      {/* 6 speakers in a 3x2 grid layout */}
+      {/* 8 speakers in a 3x3 grid layout (with 2 in last row) */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {speakers.map((speaker, index) => renderSpeaker(speaker, index))}
       </div>

@@ -20,7 +20,7 @@ const agendaItems: AgendaItem[] = [
   {
     number: '02',
     title: 'Panel Discussion: Jobs & Career',
-    duration: '40 min',
+    duration: '20 min',
     takeaways: [
       'How to land your dream job as an international student',
       'Resume and interview strategies that work for immigrants',
@@ -33,7 +33,7 @@ const agendaItems: AgendaItem[] = [
   {
     number: '03',
     title: 'Panel Discussion: Visas & Immigration',
-    duration: '40 min',
+    duration: '30 min',
     takeaways: [
       'Understanding OPT, H1B, and other visa options',
       'Green card pathways and timelines',
@@ -46,7 +46,7 @@ const agendaItems: AgendaItem[] = [
   {
     number: '04',
     title: 'Audience QnA',
-    duration: '40 min',
+    duration: '30 min',
     takeaways: [
       'Interactive session where you can ask your burning questions directly to the experts about jobs, visas, and more.'
     ]

@@ -5,13 +5,13 @@ const YoutubeLive: React.FC = () => {
     <div className="border-t border-ink py-12 md:py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center font-serif">
-          Watch Live
+          Watch Recording
         </h2>
         <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
           <iframe
             className="absolute top-0 left-0 w-full h-full border-2 border-ink"
             src="https://www.youtube.com/embed/ZsD2E5XTqT4"
-            title="AI Innovators Summit 2025 - Live Stream"
+            title="AI Innovators Summit 2025 - Recording"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             style={{ boxShadow: '4px 4px 0px 0px rgba(0,0,0,1)' }}

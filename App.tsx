@@ -8,6 +8,7 @@ import Features from './components/Features';
 import Footer from './components/Footer';
 import Ticker from './components/Ticker';
 import Metrics from './components/Metrics';
+import YoutubeLive from './components/YoutubeLive';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,9 @@ const App: React.FC = () => {
         <Ticker />
         <div className="border-t border-ink">
           <Metrics />
+        </div>
+        <div className="border-t border-ink">
+          <YoutubeLive />
         </div>
         <div className="border-t border-ink">
           <HostBio />

@@ -15,6 +15,23 @@ const ImmigrantApp: React.FC = () => {
       <Navbar registrationUrl="https://luma.com/fsar999n" />
       <main className="border-x border-ink max-w-7xl mx-auto bg-paper">
         <ImmigrantHero />
+        <div className="border-t border-ink py-8 md:py-12 px-6 flex flex-col items-center justify-center text-center">
+          <p className="font-mono text-xs md:text-sm uppercase tracking-wider mb-4 md:mb-6 text-ink opacity-70">
+            Sponsored by EB1A Experts
+          </p>
+          <a 
+            href="https://eb1aexperts.com/" 
+            target="_blank" 
+            rel="noreferrer"
+            className="transition-all duration-300"
+          >
+            <img 
+              src="/images/immigrant-summit-images/eb1a-experts.png" 
+              alt="EB1A Experts Logo" 
+              className="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+            />
+          </a>
+        </div>
         <ImmigrantTicker />
         <div className="border-t border-ink">
           <ImmigrantMetrics />

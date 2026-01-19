@@ -12,22 +12,6 @@ interface Speaker {
 
 const speakers: Speaker[] = [
   {
-    name: 'Sohan Sethi',
-    role: 'Data Analytics Manager',
-    company: 'HCSC',
-    image: '/images/dec25-summit-images/sohan_sethi.jpg',
-    linkedin: 'https://www.linkedin.com/in/sohansethi/',
-    highlights: ['120k+ LinkedIn', 'Co-founded 2 Startups By 20', 'Featured on TEDx, CNBC, Business Insider', 'India to US (STEM OPT Visa)']
-  },
-  {
-    name: 'Soundarya Balasubramani',
-    role: 'Author & Entrepreneur',
-    company: 'Author of Unshackled',
-    image: '/images/immigrant-summit-images/soundarya.jpeg',
-    linkedin: 'https://www.linkedin.com/in/soundarya-balasubramani/',
-    highlights: ['250k+ followers on Linkedin & Instagram', '3x Author', 'Ex-PM @ Salesforce', 'Featured on Business Insider, NDTV, etc.']
-  },
-  {
     name: 'Sunjana Ramana',
     role: 'Data & AI Engineer',
     company: 'QBE Insurance',
@@ -50,14 +34,6 @@ const speakers: Speaker[] = [
     image: '/images/immigrant-summit-images/sumit.png',
     linkedin: 'https://www.linkedin.com/in/sumonigupta/',
     highlights: ['Ex-Snowflake, Dropbox', 'EB1A recipient', '27k+ on LinkedIn']
-  },
-  {
-    name: 'Venkata Naga Sai Kumar Bysani',
-    role: 'Lead Data Analyst',
-    company: 'BCBS',
-    image: '/images/dec25-summit-images/sai.jpeg',
-    linkedin: 'https://www.linkedin.com/in/saibysani18/',
-    highlights: ['220k+ Linkedin', 'Featured on Times Square', 'Top 1% Data creator']
   },
   {
     name: 'Speaker TBD',
@@ -174,7 +150,7 @@ const ImmigrantSpeakers: React.FC = () => {
         </p>
       </div>
 
-      {/* 8 speakers in a 3x3 grid layout (with 2 in last row) */}
+      {/* Speakers grid layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {speakers.map((speaker, index) => renderSpeaker(speaker, index))}
       </div>

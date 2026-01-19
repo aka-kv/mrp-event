@@ -17,7 +17,7 @@ const ImmigrantApp: React.FC = () => {
         <ImmigrantHero />
         <div className="border-t border-ink py-8 md:py-12 px-6 flex flex-col items-center justify-center text-center">
           <p className="font-mono text-xs md:text-sm uppercase tracking-wider mb-4 md:mb-6 text-ink opacity-70">
-            In partnership with EB1A Experts
+            Event Sponsor: EB1A Experts
           </p>
           <a 
             href="https://eb1aexperts.com/" 

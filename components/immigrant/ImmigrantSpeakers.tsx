@@ -36,26 +36,42 @@ const speakers: Speaker[] = [
     highlights: ['Ex-Snowflake, Dropbox', 'EB1A recipient', '27k+ on LinkedIn']
   },
   {
-    name: 'Speaker TBD',
-    role: 'Role TBD',
-    company: 'Company TBD',
-    image: '/images/placeholder-speaker.jpg',
-    linkedin: '#',
-    highlights: []
+    name: 'Vidhi Sharma',
+    role: 'Data Regulatory Professional',
+    company: 'Uniper',
+    image: '/images/immigrant-summit-images/vidhi.jpeg',
+    linkedin: 'https://www.linkedin.com/in/vidhisharma93/',
+    highlights: ['7+ Years Global Experience', 'Ex-PwC | Ex-EY', 'H-1B (U.S.) → EU Blue Card']
   },
   {
-    name: 'Speaker TBD',
-    role: 'Role TBD',
-    company: 'Company TBD',
-    image: '/images/placeholder-speaker.jpg',
-    linkedin: '#',
-    highlights: []
+    name: 'Harsh Maheshwari',
+    role: 'Principal AI/ML Engineer',
+    company: 'Superset',
+    image: '/images/immigrant-summit-images/harsh.jpeg',
+    linkedin: 'https://www.linkedin.com/in/hmacmaheshwari/',
+    highlights: ['O1 Visa', 'Healthcare & Fintech', 'Mentored 100+ Engineers']
+  },
+  {
+    name: 'Veronica Sepehr',
+    role: 'CEO',
+    company: 'Westdale Immigration',
+    image: '/images/immigrant-summit-images/veronica.jpeg',
+    linkedin: 'https://www.linkedin.com/in/veronicasepehr/',
+    highlights: ['Regulated Canadian Immigration Consultant', 'Ex-RBC Ventures', 'H-1B & F-1 → Canada Pathways']
+  },
+  {
+    name: 'Asra Aslam',
+    role: 'Assistant Professor of AI & Data Science',
+    company: 'University of Sheffield',
+    image: '/images/immigrant-summit-images/arsh.jpeg',
+    linkedin: 'https://www.linkedin.com/in/asra-aslam-phd-501a4261/',
+    highlights: ['Rising Star of the Year 2024', 'UK Global Talent Visa', 'Academic/Education Leader']
   }
 ];
 
 const ImmigrantSpeakers: React.FC = () => {
   const renderSpeaker = (speaker: Speaker, index: number) => {
-    // For 8 speakers in a 3x3 grid (with 2 in last row), all speakers get borders except:
+    // For 7 speakers in a 3x3 grid (with 1 centered in last row), all speakers get borders except:
     // - Last column (index % 3 === 2): no right border
     // - Last row (index >= 6): no bottom border
     let borderClasses = 'group border-b border-ink md:border-b-0 md:odd:border-r';
@@ -63,20 +79,26 @@ const ImmigrantSpeakers: React.FC = () => {
     // Desktop layout: 3 columns, 3 rows
     borderClasses += ' lg:border-r lg:border-b';
     
-    // Remove right border on last column (indices 2, 5, 7)
-    if (index % 3 === 2) {
+    // Remove right border on last column (indices 2, 5)
+    if (index % 3 === 2 && index < 6) {
       borderClasses += ' lg:border-r-0';
     }
     
-    // Remove bottom border on last row (indices 6, 7)
+    // Remove bottom border on last row (index 6 - Asra Aslam)
     if (index >= 6) {
       borderClasses += ' lg:border-b-0';
+    }
+    
+    // Center the last speaker (Asra Aslam) on large screens and ensure it has all borders
+    let gridClasses = '';
+    if (index === 6) {
+      gridClasses = 'lg:col-start-2 lg:border-l';
     }
     
     return (
     <div
       key={speaker.name}
-      className={`${borderClasses} relative`}
+      className={`${borderClasses} ${gridClasses} relative`}
     >
       <div className="aspect-square w-full overflow-hidden border-b border-ink bg-[#EBEBE5] relative flex items-center justify-center">
         {/* Placeholder pattern for TBD speakers */}

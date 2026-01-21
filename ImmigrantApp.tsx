@@ -8,6 +8,7 @@ import ImmigrantFeatures from './components/immigrant/ImmigrantFeatures';
 import ImmigrantFooter from './components/immigrant/ImmigrantFooter';
 import ImmigrantTicker from './components/immigrant/ImmigrantTicker';
 import ImmigrantMetrics from './components/immigrant/ImmigrantMetrics';
+import ImmigrantVisaPaths from './components/immigrant/ImmigrantVisaPaths';
 
 const ImmigrantApp: React.FC = () => {
   return (
@@ -41,6 +42,9 @@ const ImmigrantApp: React.FC = () => {
         </div>
         <div className="border-t border-ink">
           <ImmigrantFeatures />
+        </div>
+        <div className="border-t border-ink">
+          <ImmigrantVisaPaths />
         </div>
         <div className="border-t border-ink">
           <ImmigrantSpeakers />

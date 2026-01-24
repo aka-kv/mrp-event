@@ -59,46 +59,39 @@ const speakers: Speaker[] = [
     linkedin: 'https://www.linkedin.com/in/veronicasepehr/',
     highlights: ['Regulated Canadian Immigration Consultant', 'Ex-RBC Ventures', 'H-1B & F-1 → Canada Pathways']
   },
-  {
-    name: 'Asra Aslam',
-    role: 'Assistant Professor of AI & Data Science',
-    company: 'University of Sheffield',
-    image: '/images/immigrant-summit-images/arsh.jpeg',
-    linkedin: 'https://www.linkedin.com/in/asra-aslam-phd-501a4261/',
-    highlights: ['Rising Star of the Year 2024', 'UK Global Talent Visa', 'Academic/Education Leader']
-  }
+  
 ];
 
 const ImmigrantSpeakers: React.FC = () => {
   const renderSpeaker = (speaker: Speaker, index: number) => {
-    // For 7 speakers in a 3x3 grid (with 1 centered in last row), all speakers get borders except:
-    // - Last column (index % 3 === 2): no right border
-    // - Last row (index >= 6): no bottom border
-    let borderClasses = 'group border-b border-ink md:border-b-0 md:odd:border-r';
-    
-    // Desktop layout: 3 columns, 3 rows
-    borderClasses += ' lg:border-r lg:border-b';
-    
-    // Remove right border on last column (indices 2, 5)
-    if (index % 3 === 2 && index < 6) {
+    // Responsive borders for 1/2/3 column layouts.
+    let borderClasses = 'group border-b border-ink';
+    if (index === speakers.length - 1) {
+      borderClasses += ' border-b-0';
+    }
+
+    // Medium layout: 2 columns, 3 rows.
+    borderClasses += ' md:border-b md:border-r';
+    if (index % 2 === 1) {
+      borderClasses += ' md:border-r-0';
+    }
+    if (index >= speakers.length - 2) {
+      borderClasses += ' md:border-b-0';
+    }
+
+    // Large layout: 3 columns, 2 rows.
+    borderClasses += ' lg:border-b lg:border-r';
+    if (index % 3 === 2) {
       borderClasses += ' lg:border-r-0';
     }
-    
-    // Remove bottom border on last row (index 6 - Asra Aslam)
-    if (index >= 6) {
+    if (index >= speakers.length - 3) {
       borderClasses += ' lg:border-b-0';
-    }
-    
-    // Center the last speaker (Asra Aslam) on large screens and ensure it has all borders
-    let gridClasses = '';
-    if (index === 6) {
-      gridClasses = 'lg:col-start-2 lg:border-l';
     }
     
     return (
     <div
       key={speaker.name}
-      className={`${borderClasses} ${gridClasses} relative`}
+      className={`${borderClasses} relative`}
     >
       <div className="aspect-square w-full overflow-hidden border-b border-ink bg-[#EBEBE5] relative flex items-center justify-center">
         {/* Placeholder pattern for TBD speakers */}

@@ -7,7 +7,6 @@ const visaPaths = [
   'F1 STEM OPT → UK HPI',
   'H-1B → EU Blue Card (Germany)',
   'H-1B → Germany Opportunity Card',
-  'UK Global Talent',
   'US → Canada PR Pathways'
 ];
 

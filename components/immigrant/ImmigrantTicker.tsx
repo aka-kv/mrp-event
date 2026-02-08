@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ImmigrantTicker: React.FC = () => {
-  const content = "REGISTRATIONS OPENING SOON /// JOIN THE IMMIGRANT SUMMIT /// FEBRUARY 7 2026 /// JOBS VISAS FINANCE /// ";
+  const content = "EVENT COMPLETE /// THANK YOU FOR ATTENDING /// THE IMMIGRANT SUMMIT /// FEBRUARY 7 2026 /// WATCH THE RECORDING /// ";
   const repeatedContent = Array(10).fill(content).join("");
 
   return (

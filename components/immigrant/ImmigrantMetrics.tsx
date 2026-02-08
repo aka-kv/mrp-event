@@ -5,24 +5,24 @@ const ImmigrantMetrics: React.FC = () => {
     <section className="bg-paper border-t border-ink py-12 md:py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold uppercase mb-4">Previous Event Impact</h2>
-          <p className="font-mono text-sm uppercase tracking-wider opacity-70 mb-2">December 2025 AI Innovators Summit</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold uppercase mb-4">Event Impact</h2>
+          <p className="font-mono text-sm uppercase tracking-wider opacity-70 mb-2">The Immigrant Summit · February 2026</p>
           <p className="font-mono text-xs uppercase tracking-wider opacity-60">The Numbers That Matter</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           <MetricCard 
-            value="830+"
+            value="725+"
             label="People Registered"
             description="Total registrations for the summit"
           />
           <MetricCard 
-            value="120+"
-            label="Concurrent Attendees"
+            value="140+"
+            label="Concurrent Viewers"
             description="Peak live attendance during the event"
           />
           <MetricCard 
-            value="750+"
+            value="725+"
             label="Recording Views"
             description="People who watched the recording"
             isLast={true}

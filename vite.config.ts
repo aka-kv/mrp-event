@@ -24,6 +24,9 @@ export default defineConfig(({ mode }) => {
               if (req.url === '/all-events' || req.url === '/all-events/') {
                 req.url = '/all-events.html';
               }
+              if (req.url === '/global-ai-summit' || req.url === '/global-ai-summit/') {
+                req.url = '/global-ai-summit.html';
+              }
               next();
             });
           },
@@ -36,6 +39,7 @@ export default defineConfig(({ mode }) => {
             summit: path.resolve(__dirname, 'summit.html'),
             immigrantSummit: path.resolve(__dirname, 'immigrant-summit.html'),
             allEvents: path.resolve(__dirname, 'all-events.html'),
+            globalAiSummit: path.resolve(__dirname, 'global-ai-summit.html'),
           },
         },
       },

@@ -1,0 +1,78 @@
+import React from 'react';
+
+const GlobalAISummitHostBio: React.FC = () => {
+  return (
+    <section className="relative">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+
+            {/* Image Side */}
+            <div className="relative border-b md:border-b-0 md:border-r border-ink bg-gray-200 overflow-hidden flex items-center justify-center min-h-[420px] md:min-h-[520px] pb-24">
+                <a
+                    href="https://www.linkedin.com/in/hariprasad20/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="absolute inset-0 flex items-center justify-center -translate-y-4 md:-translate-y-6"
+                >
+                    <img
+                        src="/images/hari-prasad.webp"
+                        alt="Hari Prasad"
+                        className="max-h-full max-w-full object-contain bg-[#EBEBE5] p-6 md:p-10 grayscale hover:grayscale-0 transition-all duration-500"
+                    />
+                </a>
+
+                <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-paper border-t border-ink flex justify-between items-end">
+                    <div>
+                        <p className="font-mono text-xs uppercase mb-1">Host & Curator</p>
+                        <p className="font-serif font-bold text-xl md:text-2xl">Hari Prasad</p>
+                    </div>
+                    <div className="h-3 w-3 bg-ink"></div>
+                </div>
+            </div>
+
+            {/* Content Side */}
+            <div className="p-8 md:p-10 flex flex-col justify-center bg-paper">
+                <div className="mb-6 md:mb-8">
+                     <span className="font-mono text-xs border border-ink px-2 py-1 uppercase bg-ink text-paper">
+                        The Host
+                     </span>
+                </div>
+
+                <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">
+                    From hype <br />
+                    to production.
+                </h2>
+
+                <div className="font-serif text-base md:text-lg leading-relaxed space-y-4 mb-8 max-w-md">
+                    <p>
+                        Hari Prasad is an Ivy League Alum and AI Engineer who has shipped 5+ AI products into production.
+                    </p>
+                    <p>
+                        He's watched the AI landscape shift from research curiosity to the defining platform of our era, and built throughout every phase of it.
+                    </p>
+                    <p>
+                        The Global AI Summit is his third event, bringing together the people who are actually moving the needle on AI to share what's real, what's next, and what matters.
+                    </p>
+                    <p>
+                        "The gap between talking about AI and building with it has never been wider. Let's close it."
+                    </p>
+                </div>
+
+                <div className="pt-6 border-t border-ink">
+                    <p className="font-mono text-xs uppercase tracking-widest mb-3 text-gray-500">Featured In</p>
+                    <div className="flex flex-wrap gap-3 font-mono font-bold text-base uppercase">
+                        <span>TEDx</span>
+                        <span className="text-gray-400">|</span>
+                        <span>BBC</span>
+                        <span className="text-gray-400">|</span>
+                        <a href="https://www.linkedin.com/in/hariprasad20/" target="_blank" rel="noreferrer" className="underline decoration-1 underline-offset-4">
+                            LinkedIn Top Voice
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  );
+};
+
+export default GlobalAISummitHostBio;

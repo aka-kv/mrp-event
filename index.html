@@ -247,12 +247,87 @@
     </header>
 
     <!-- Main Content Area: Previous Events + Statistics --><main class="flex-grow">
-        
+
+        <!-- Upcoming Event: Global AI Summit -->
+        <section class="bg-ink text-paper grid-line-b">
+            <div class="max-w-7xl mx-auto px-6 py-12 md:py-16">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12">
+
+                    <!-- Left: Label + Event Info -->
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="font-mono text-xs uppercase tracking-widest border border-paper px-2 py-1 text-paper">
+                                Upcoming
+                            </span>
+                            <span class="font-mono text-xs uppercase tracking-widest opacity-50">
+                                Virtual &bull; Free
+                            </span>
+                        </div>
+                        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-[0.95] tracking-tight mb-4">
+                            The Global<br>AI Summit
+                        </h2>
+                        <p class="font-mono text-sm md:text-base opacity-60 mb-4 uppercase tracking-wider">
+                            March 14, 2026 &bull; 11:00 AM EST
+                        </p>
+                        <p class="font-serif text-base md:text-lg leading-relaxed opacity-80 max-w-lg">
+                            AI leaders and practitioners from around the world. No fluff, no theory. Real strategies for building and working in an AI-first era.
+                        </p>
+                    </div>
+
+                    <!-- Right: Countdown + CTA -->
+                    <div class="flex flex-col items-start md:items-end gap-6 flex-shrink-0">
+                        <div class="flex gap-4 md:gap-6" id="homepage-countdown">
+                            <div class="flex flex-col items-center gap-1">
+                                <span id="hc-days" class="font-mono text-4xl md:text-5xl font-bold tabular-nums">--</span>
+                                <span class="font-mono text-[10px] uppercase tracking-widest opacity-50">Days</span>
+                            </div>
+                            <span class="font-mono text-4xl md:text-5xl font-bold opacity-30 self-start mt-1">:</span>
+                            <div class="flex flex-col items-center gap-1">
+                                <span id="hc-hours" class="font-mono text-4xl md:text-5xl font-bold tabular-nums">--</span>
+                                <span class="font-mono text-[10px] uppercase tracking-widest opacity-50">Hrs</span>
+                            </div>
+                            <span class="font-mono text-4xl md:text-5xl font-bold opacity-30 self-start mt-1">:</span>
+                            <div class="flex flex-col items-center gap-1">
+                                <span id="hc-mins" class="font-mono text-4xl md:text-5xl font-bold tabular-nums">--</span>
+                                <span class="font-mono text-[10px] uppercase tracking-widest opacity-50">Mins</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                            <a href="/global-ai-summit" class="px-8 py-3 bg-paper text-ink font-mono text-sm font-bold uppercase border border-paper hover:bg-ink hover:text-paper transition-colors text-center">
+                                Learn More &rarr;
+                            </a>
+                            <a href="https://luma.com/d72x6b4o" target="_blank" rel="noreferrer" class="px-8 py-3 bg-ink text-paper font-mono text-sm font-bold uppercase border border-paper/40 hover:border-paper transition-colors text-center opacity-70 hover:opacity-100">
+                                Reserve Seat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            (function() {
+                var target = new Date("2026-03-14T15:00:00Z").getTime();
+                function update() {
+                    var diff = target - Date.now();
+                    if (diff <= 0) {
+                        document.getElementById('homepage-countdown').innerHTML = '<span class="font-mono text-sm uppercase tracking-widest opacity-60">Event Live Now</span>';
+                        return;
+                    }
+                    document.getElementById('hc-days').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+                    document.getElementById('hc-hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+                    document.getElementById('hc-mins').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+                }
+                update();
+                setInterval(update, 60000);
+            })();
+        </script>
+
         <!-- Our Previous Events --><section class="grid-line-b py-12 md:py-16">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-2">Our previous events</h2>
                 <p class="font-mono text-sm opacity-70 mb-8 max-w-xl">
-                    These are the two summits we've conducted so far. Watch recordings, explore agendas, and join the waitlist for the next one.
+                    Two summits down. Watch recordings, explore agendas, and catch the next one live.
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

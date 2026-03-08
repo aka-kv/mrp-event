@@ -22,7 +22,7 @@ const ImmigrantMetrics: React.FC = () => {
             description="Peak live attendance during the event"
           />
           <MetricCard 
-            value="725+"
+            value="915+"
             label="Recording Views"
             description="People who watched the recording"
             isLast={true}
